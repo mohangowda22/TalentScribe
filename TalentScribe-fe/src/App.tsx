@@ -1,5 +1,5 @@
 import './App.css';
-import { ResumeUpload, JobSearch, ApplicationAutomation, StatusTracking } from './components';
+import { ResumeUpload, JobSearch } from './components';
 import { Container, Typography } from '@mui/material';
 
 function App() {
@@ -11,8 +11,6 @@ function App() {
       <div className="main-ui">
         <ResumeUpload />
         <JobSearch />
-        <ApplicationAutomation />
-        <StatusTracking />
       </div>
     </Container>
   );

@@ -11,7 +11,7 @@ const StatusTracking: React.FC = () => {
   const fetchStatus = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/status');
+  const res = await fetch('http://localhost:5050/api/status');
       if (res.ok) {
         const data = await res.json();
         dispatch(setStatus(data.status));

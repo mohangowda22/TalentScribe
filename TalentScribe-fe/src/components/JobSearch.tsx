@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { io } from 'socket.io-client';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { setJobs } from '../store';
 import { Card, CardContent, Typography, Button, Box, TextField, List, ListItem, ListItemText } from '@mui/material';
@@ -9,10 +10,20 @@ const JobSearch: React.FC = () => {
   const dispatch = useAppDispatch();
   const jobs = useAppSelector(state => state.app.jobs);
 
+  useEffect(() => {
+    const socket = io('http://localhost:5050');
+    socket.on('jobsUpdated', (jobs: any[]) => {
+      dispatch(setJobs(jobs));
+    });
+    return () => {
+      socket.disconnect();
+    };
+  }, [dispatch]);
+
   const handleSearch = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/jobs?search=${encodeURIComponent(query)}`);
+      const res = await fetch(`http://localhost:5050/api/jobs?search=${encodeURIComponent(query)}`);
       if (res.ok) {
         const data = await res.json();
         dispatch(setJobs(data.jobs));
