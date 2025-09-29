@@ -1,64 +1,61 @@
 # TalentScribe
 
-TalentScribe is an AI-powered job search and auto-application system designed to streamline the job application process. Built with React for the frontend and Node.js for the backend, this application allows users to upload resumes, search for jobs, and automate the application process.
+Automated job search, resume upload, and application tracking platform.
 
-## Features
+---
 
-- **Resume Uploading**: Users can upload their resumes in PDF or DOCX format, which are then parsed to extract relevant skills and experience.
-- **Job Searching**: The application automatically searches for job listings from various sources and displays them to the user.
-- **Application Automation**: Users can apply for jobs automatically using their uploaded resume and customized cover letters.
-- **Customization Options**: Users can customize their applications with different cover letters, role preferences, and filters such as location, CTC, and remote work options.
-- **Status Tracking**: The application provides a status tracking feature to monitor the progress of job applications (applied, pending, interviewed).
-- **Responsive Design**: The UI is clean, responsive, and mobile-friendly, ensuring a smooth user experience across devices.
+## 📁 Structure
 
-## Tech Stack
+- **TalentScribe-fe** — Frontend (React + Vite)
+- **TalentScribe-be** — Backend (Node.js + Express + MongoDB)
 
-- **Frontend**: React
-- **Backend**: Node.js, Express
-- **Database**: (Optional) MongoDB or any other preferred database
-- **Libraries**: 
-  - PDF/DOCX parsing: `pdf-parse`, `mammoth`
-  - Web scraping: `axios`, `cheerio`
-  - Automation: `puppeteer`
-  - State management: `redux` (optional)
+---
 
-## Setup Instructions
+## ✨ Features
 
-### Backend
+- **Resume Upload & Parsing:** Supports PDF/DOCX formats
+- **Job Search:** Filter by keywords and location
+- **Automated Applications:** Apply to jobs automatically
+- **Application Tracking:** Monitor status and progress
+- **Real-Time Updates:** Instant notifications
 
-1. Navigate to the `backend` directory.
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the server:
-   ```
-   npm start
-   ```
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Vite, TypeScript, Socket.io, Axios
+- **Backend:** Node.js, Express, MongoDB, Cheerio, Puppeteer
+
+---
+
+## 🚀 Quick Start
 
 ### Frontend
 
-1. Navigate to the `frontend` directory.
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the React application:
-   ```
-   npm start
-   ```
+See [`TalentScribe-fe/README.md`](TalentScribe-fe/README.md) for setup and usage.
 
-## Usage
+### Backend
 
-1. Upload your resume using the Resume Upload component.
-2. Search for jobs using the job search feature.
-3. Customize your applications and apply for jobs with a single click.
-4. Track the status of your applications in real-time.
+See [`TalentScribe-be/README.md`](TalentScribe-be/README.md) for setup and usage.
 
-## Contributing
+---
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
+## 📚 Usage
 
-## License
+1. **Upload Resume:** Use the Resume Upload feature.
+2. **Search Jobs:** Enter keywords and location.
+3. **Automate Applications:** Apply and track status.
+4. **Get Updates:** Receive real-time notifications.
 
-This project is open-source and available under the MIT License.
+---
+
+## 🤝 Contributing
+
+Pull requests and issues are welcome!  
+Please follow conventional commit messages and code style.
+
+---
+
+## 📄 License
+
+MIT
